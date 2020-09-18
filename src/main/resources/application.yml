@@ -1,0 +1,20 @@
+server:
+  port: 8089
+  servlet:
+    context-path: /root
+spring:
+  datasource:
+    dynamic:
+      primary: master
+      strict: true
+      datasource:
+        master:
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://localhost:3306/boot?serverTimezone=UTC
+          username: root
+          password: root
+        db2:
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://localhost:3306/boot_jpa?serverTimezone=UTC
+          username: root
+          password: root
